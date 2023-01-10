@@ -14,7 +14,7 @@ int main() {
     while (text1[i] != '\0') {
         text2[i] = text1[i];
         i++;
-    }
+    }//test
     std::cout << text2<< std::endl;
     std::cout << text_position("test system","sys")<< std::endl;
     std::cout << text_between_positions("11","15","1234567890_11_12_13_14_15_16_17_18_19")<< std::endl;
