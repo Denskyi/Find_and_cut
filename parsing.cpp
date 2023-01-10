@@ -102,8 +102,3 @@ char* read_out_file(const std::string& filename) {
     return file_content;
 }
 
-struct testing_structures {
-    std::string name;
-    std::string address;
-    int num;
-};

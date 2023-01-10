@@ -2,6 +2,7 @@
 #include "string"
 #include "fstream"
 #include "parsing.h"
+#include "sonata_driver.h"
 
 // parsing.cpp, parsing.h
 void writing_in_file(const char* file_content,const std::string& filename);//Функция записи в файл
@@ -14,14 +15,13 @@ int main() {
     while (text1[i] != '\0') {
         text2[i] = text1[i];
         i++;
-    }//test
+    }
     std::cout << text2<< std::endl;
     std::cout << text_position("test system","sys")<< std::endl;
     std::cout << text_between_positions("11","15","1234567890_11_12_13_14_15_16_17_18_19")<< std::endl;
     const char *some_text = "Ep 10_11_12_13_14_15_16_17_18_19 izi";
     std::cout << take_between("some_text + 8", some_text + 20) << std::endl;
-
-
+    sonata_driver driver{};//тестирование структуры соната_драйвер
 
 
     const char* file_content_copy = read_out_file("AT_PRUCAT2HCBDEDBTR7CYICFZUYY.mb_cfg");//Хранилище/массив требуемого размера в оперативной памяти
