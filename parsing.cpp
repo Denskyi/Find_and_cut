@@ -101,3 +101,9 @@ char* read_out_file(const std::string& filename) {
     file_content[file_size] = '\0';//Дописываем ноль вконце
     return file_content;
 }
+
+struct testing_structures {
+    std::string name;
+    std::string address;
+    int num;
+};

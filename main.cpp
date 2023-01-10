@@ -20,11 +20,7 @@ int main() {
     std::cout << text_between_positions("11","15","1234567890_11_12_13_14_15_16_17_18_19")<< std::endl;
     const char *some_text = "Ep 10_11_12_13_14_15_16_17_18_19 izi";
     std::cout << take_between("some_text + 8", some_text + 20) << std::endl;
-    struct testing_structures {
-        std::string name;
-        std::string address;
-        int num;
-    };
+
 
 
 

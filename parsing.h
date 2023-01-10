@@ -13,4 +13,5 @@ std::string text_between_positions(const char *start_text_position, const char *
 std::string take_between(const char *from, const char *to);//Функция поиска строки от и до
 const char *text_between_positions2(const char *text, const char *prefix, const char *suffix, std::string &out); //Функция передвигает указатель и копирует кусочек текста
 char* read_out_file(const std::string& filename);//Функция чтения файла
+struct testing_structures; //структура для данных
 #endif //UNTITLED_PARSING_H
