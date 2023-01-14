@@ -13,8 +13,10 @@ class sonata_driver {
         std::string address;
         int num;
 public:
-    sonata_driver();//объявление конструктора
+    explicit sonata_driver();//объявление конструктора
     const char* parse_data(const char* in);
+    explicit sonata_driver(const char* name,const char* address, int num);
+    friend std::ostream &operator<<(std::ostream &sout, const sonata_driver &instance);
 };
 
 

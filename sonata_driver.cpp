@@ -6,6 +6,7 @@
 #include "parsing.h"
 
 sonata_driver::sonata_driver() : name(), address(), num(0)
+
 {
 
 }
@@ -17,6 +18,11 @@ const char* sonata_driver::parse_data(const char* in)
     in = text_between_positions2(in, "Device=\"", "\"",  dev_num);
     in = text_between_positions2(in, "Channel=\"", "\"", address);
     num = std::stoi(dev_num);
-
     return in;
 }
+std::ostream &operator<<(std::ostream &sout, const sonata_driver &instance)
+{
+    sout << "this is test class:" << instance.num << instance.name << instance.address << std::endl;
+    return sout;
+}
+//const char *printing_driver;
