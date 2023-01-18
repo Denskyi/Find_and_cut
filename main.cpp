@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "string"
 #include "fstream"
 #include "parsing.h"
@@ -7,6 +8,7 @@
 // parsing.cpp, parsing.h
 void writing_in_file(const char* file_content,const std::string& filename);//Функция записи в файл
 int main() {
+    /*
     const char *text1 = "test print";
     std::cout << text1<< std::endl;
     char text2[16];
@@ -27,10 +29,27 @@ int main() {
  //   std::cout << file_content_copy << std::endl;//Вывод файла в консоль из массива (оперативной памяти)
     writing_in_file(file_content_copy, "some file.txt");
     delete[] file_content_copy;//Очистка из памяти
+     */
+    std::vector<int> my_ints;//пустой массив
+    std::vector<float> my_floats{1.0f, 0.0f, 0.0f, -1.f};//Массив из чисел с плавающей точкой
+    std::vector<int> my_ints2(10, 1);//Здеся создался массив из десяти единичек
+//    std::cout << my_ints[0] << " " << my_ints[1];//Обращение к массиву без проверки
+//    std::cout << my_ints.at(0) << " " << my_ints.at(1);//Обращение к массиву с проверкой можно ловить исключение через try {} catch
+    my_ints.push_back(14); //добовляет число в конец массива
+
+//    my_ints.size();//получаем число длинная масива
+    for (int i : my_ints2)// стандартный форыч без возможности изменять массив
+    {
+        std::cout << i << " ";
+        std::cout << i << std::endl;
+    }
+    for (int& i : my_ints)//с возможностью изменять
+    {
+        ++i;
+        std::cout << i << std::endl;
+    }
     return 0;
-
-
-}
+};
 
 
 
